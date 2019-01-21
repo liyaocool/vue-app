@@ -1,16 +1,13 @@
 <template>
-  <MainContent class="Home_wrap">
-    <div slot="MainContent">Home_wrap内容</div>
-  </MainContent>
+  <div class="home_wrap">home_wrap</div>
 </template>
 
 <script>
 export default {
-  name: 'home',
-}
+  name: "home"
+};
 </script>
 
 <style lang="stylus" scoped>
-
 </style>
 

@@ -1,10 +1,18 @@
 <template>
   <div class="MainNav_wrap">
     <ul>
-      <li><router-link to="">菜单1</router-link></li>
-      <li><router-link to="">菜单2</router-link></li>
-      <li><router-link to="">菜单3</router-link></li>
-      <li><router-link to="">菜单4</router-link></li>
+      <li>
+        <router-link to>组件</router-link>
+      </li>
+      <li>
+        <router-link to>插件</router-link>
+      </li>
+      <li>
+        <router-link to>样式</router-link>
+      </li>
+      <li>
+        <router-link to>我的</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,4 +24,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.MainNav_wrap {
+  height: 100%;
+  background: $main_blue;
+  color #fff;
+
+  ul {
+    list-style: none;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      a {
+        color #eee;
+      }
+    }
+  }
+}
 </style>
