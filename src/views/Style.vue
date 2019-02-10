@@ -1,10 +1,10 @@
 <template>
-  <div class="home_wrap">首页</div>
+  <div class="style_wrap">样式</div>
 </template>
 
 <script>
 export default {
-  name: "home"
+  name: "Style"
 };
 </script>
 

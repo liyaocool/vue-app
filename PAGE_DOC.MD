@@ -4,7 +4,7 @@
 
 ### 1.主色调
 ```
-$main_color: #ff58ee
+$main_blue: #2c9bc7
 ```
 ### 2.尺寸
 ```

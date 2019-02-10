@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <header>
-      <main-header/>
-    </header>
     <div class="main_content">
       <router-view/>
     </div>
@@ -13,29 +10,20 @@
 </template>
 
 <script>
-import MainHeader from "@/components/MainHeader";
 import MainNav from "@/components/MainNav";
+
 export default {
   name: "app",
   components: {
-    MainHeader,
     MainNav
   }
 };
 </script>
 
 <style lang="stylus">
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 44px;
-  z-index: 100;
-}
-
 .main_content {
-  // padding-top 44px
-  // padding-bottom 60px
+  // padding-top: 44px;
+  padding-bottom: 60px;
 }
 
 footer {
@@ -43,6 +31,6 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  z-index: 100;
+  z-index: 102;
 }
 </style>

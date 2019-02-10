@@ -4,28 +4,44 @@ import index from '@/views/Index.vue'
 
 const routes = [{
         path: '*',
-        redirect: '/index/home'
+        redirect: '/index'
     },
     {
         path: '/index',
         name: 'index',
-        component: index, //初始全局加载
-        children: [{
-            path: 'home',
-            name: 'home',
-            meta: {
-                requireLogin: true
-            },
-            component: () => import('@/views/Home')
-        },
-        {
-            path:'mine',
-            name:'mine',
-            component:()=>import('@/views/Mine')
-        }
-        ]
-
+        component: index
     },
+    {
+        path: '/home',
+        name: 'home',
+        component: () => import('@/views/Home')
+    },
+    {
+        path: '/plugin',
+        name: 'plugin',
+        component: () => import('@/views/Plugin')
+    },
+    {
+        path: '/style',
+        name: 'style',
+        component: () => import('@/views/Style')
+    },
+    {
+        path: '/mine',
+        name: 'mine',
+        component: () => import('@/views/Mine'),
+        children: [
+            {
+                path: 'contact',
+                name: 'contact',
+                // meta: {
+                //     requireLogin: true
+                // },
+                component: () => import('@/views/Mine/contact')
+            },
+
+        ]
+    }
 ]
 
 export default routes
