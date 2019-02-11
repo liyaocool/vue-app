@@ -34,9 +34,6 @@ const routes = [{
             {
                 path: 'contact',
                 name: 'contact',
-                // meta: {
-                //     requireLogin: true
-                // },
                 component: () => import('@/views/Mine/contact')
             },
 

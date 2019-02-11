@@ -20,22 +20,22 @@ export default {
         {
           icon: "fa fa-home",
           title: "首页",
-          path: "home"
+          path: "/home"
         },
         {
           icon: "fa fa-plus-circle",
           title: "插件",
-          path: "plugin"
+          path: "/plugin"
         },
         {
           icon: "fa fa-css3",
           title: "样式",
-          path: "style"
+          path: "/style"
         },
         {
           icon: "fa fa-user",
           title: "我的",
-          path: "mine"
+          path: "/mine"
         }
       ]
     };
@@ -72,7 +72,7 @@ export default {
         font-size: 14px;
       }
 
-      a.router-link-active {
+      a.actived {
         color: $main_orange;
       }
     }
