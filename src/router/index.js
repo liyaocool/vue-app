@@ -11,10 +11,10 @@ const router = new Router({
   routes,
 })
 
-// //全局导航守卫
-// router.beforeEach((to, from, next) => {
-//   console.log('路由跳转',to)
-//   next()
-// })
+//全局导航守卫
+router.beforeEach((to, from, next) => {
+  console.log('路由跳转',to)
+  next()
+})
 
 export default router

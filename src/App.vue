@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main_content">
-      <router-view/>
+      <main-view/>
     </div>
     <footer>
       <main-nav/>
@@ -22,7 +22,6 @@ export default {
 
 <style lang="stylus">
 .main_content {
-  // padding-top: 44px;
   padding-bottom: 60px;
 }
 
@@ -30,7 +29,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px;
   z-index: 102;
 }
 </style>

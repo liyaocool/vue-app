@@ -33,15 +33,15 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 44px;
-  background: $main_gary;
+  height: 40px;
+  background: $main_page_bg;
   color: #fff;
   z-index: 100;
 
   .title_content {
     line-height: 40px;
     color: $main_black;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 10px;
   }
 

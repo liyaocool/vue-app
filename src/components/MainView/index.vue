@@ -1,17 +1,45 @@
 <template>
-  <div class="router_view_wrap">
-    <router-view></router-view>
+  <div>
+    <transition :name="trans">
+      <keep-alive>
+        <router-view v-if="$route.meta.keepAlive"/>
+      </keep-alive>
+    </transition>
+    <transition :name="trans">
+      <router-view v-if="!$route.meta.keepAlive"/>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: "MainView"
+  name: "MainView",
+  data() {
+    return {
+      trans: "page-right"
+    };
+  },
+  watch: {
+    $route(to, from) {
+      if (from.meta.page < to.meta.page) {
+        this.trans = "page-right";
+      } else {
+        this.trans = "page-left";
+      }
+    }
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
-.router_view_wrap {
+.page-left-enter, .page-right-leave-active {
+  transform: translate(-100%, 0);
+}
+.page-right-enter, .page-left-leave-active {
+  transform: translate(100%, 0);
+}
 
+.page-left-enter-active, .page-left-leave-active, .page-right-enter-active, .page-right-leave-active {
+  transition: transform 0.3s;
 }
 </style>

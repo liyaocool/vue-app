@@ -45,26 +45,26 @@ export default {
 
 <style lang="stylus" scoped>
 .MainNav_wrap {
-  height: 100%;
-  background: $main_gary;
+  height: 50px;
+  background: $main_page_bg;
   color: #fff;
 
   .fa {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 3px;
   }
 
   ul {
     list-style: none;
     width: 100%;
-    height: 100%;
+    height: 50px;
 
-    // margin: 10px auto;
     li {
+      margin: 2% 0;
       display: inline-block;
       width: 25%;
       text-align: center;
-      margin: 10px 0;
 
       a {
         width: 100%;

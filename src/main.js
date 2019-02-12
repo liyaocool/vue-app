@@ -5,6 +5,7 @@ import store from './store'
 import '@/assets/styles/index.styl';
 import MainHeader from "@/components/MainHeader";
 import MainView from "@/components/MainView";
+import 'lib-flexible/flexible.js'
 
 Vue.config.productionTip = false;
 Vue.component('MainHeader', MainHeader); //全局注册 头部组件

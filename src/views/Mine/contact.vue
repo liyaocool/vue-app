@@ -13,8 +13,7 @@ export default {
       title: "联系我"
     };
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
@@ -25,7 +24,8 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  padding-top: 44px;
+  
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 </style>

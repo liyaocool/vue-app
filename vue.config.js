@@ -23,5 +23,5 @@ module.exports = {
         } else {
             //开发环境的配置
         }
-    }
+    },
 }

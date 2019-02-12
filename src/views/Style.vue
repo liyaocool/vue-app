@@ -9,5 +9,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.style_wrap{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 </style>
 
