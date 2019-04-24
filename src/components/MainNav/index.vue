@@ -45,7 +45,10 @@ export default {
 
 <style lang="stylus" scoped>
 .MainNav_wrap {
+  position: absolute;
+  bottom: 0;
   height: 50px;
+  width: 100%;
   background: $main_page_bg;
   color: #fff;
 

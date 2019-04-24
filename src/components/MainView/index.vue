@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view_wrap">
     <transition :name="trans">
       <keep-alive>
         <router-view v-if="$route.meta.keepAlive"/>
@@ -32,9 +32,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.view_wrap {
+  height: 100%;
+}
+
 .page-left-enter, .page-right-leave-active {
   transform: translate(-100%, 0);
 }
+
 .page-right-enter, .page-left-leave-active {
   transform: translate(100%, 0);
 }

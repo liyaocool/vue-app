@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <div class="main_content">
-      <main-view/>
-    </div>
-    <footer>
-      <main-nav/>
-    </footer>
+    <main-view/>
+    <main-nav/>
   </div>
 </template>
 
@@ -20,15 +16,8 @@ export default {
 };
 </script>
 
-<style lang="stylus">
-.main_content {
-  padding-bottom: 60px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 102;
+<style lang="stylus" scoped>
+#app {
+  height: 100%;
 }
 </style>

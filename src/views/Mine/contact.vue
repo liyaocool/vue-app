@@ -1,7 +1,7 @@
 <template>
   <div class="contact_wrap">
     <main-header :can_back="true" :title="title"/>
-    <p>联系我 123456</p>
+    <p>联系我们 123456</p>
   </div>
 </template>
 

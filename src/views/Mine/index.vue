@@ -2,16 +2,9 @@
   <div class="Mine_wrap">
     <ul>
       <li>
-        <router-link to>关于我</router-link>
-      </li>
-      <li>
-        <router-link to>其他</router-link>
-      </li>
-      <li>
-        <router-link to="/mine/contact">联系我</router-link>
+        <router-link to="/mine/contact">联系我们 二级页面</router-link>
       </li>
     </ul>
-    <MainView></MainView>
   </div>
 </template>
 

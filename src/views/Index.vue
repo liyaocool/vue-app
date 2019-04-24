@@ -19,18 +19,14 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .Index_wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 103;
+  position: fixed;
+  z-index: 1; // >footNav z-indx 0
   width: 100%;
   height: 100%;
   background: $main_page_bg;
 
   .content {
-    margin: 50% auto;
+    margin: 20% auto;
     text-align: center;
 
     h1 {
