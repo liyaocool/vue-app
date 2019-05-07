@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import '@/assets/styles/index.styl'
+import '@/assets/styles/reset.styl'
+import '@/assets/icon/font-awesome-4.7.0/css/font-awesome.min.css'
 import MainHeader from "@/components/MainHeader"
 import MainView from "@/components/MainView"
 import 'lib-flexible/flexible.js'

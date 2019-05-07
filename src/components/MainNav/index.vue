@@ -1,13 +1,12 @@
 <template>
-  <div class="MainNav_wrap">
-    <ul>
-      <li v-for="(item, index) in list" :key="index">
-        <router-link :to="item.path">
-          <i :class="item.icon"></i>
-          <span>{{item.title}}</span>
-        </router-link>
-      </li>
-    </ul>
+  <div class="MainNav_wrap" v-show="showFooter">
+    <div class="footer-nav">
+      <router-link :to="item.path" v-for="(item, index) in list" :key="index">
+        <i :class="item.icon" class="icon_item"></i>
+        <p class="nav_title">{{item.title}}</p>
+      </router-link>
+      <span class="move"></span>
+    </div>
   </div>
 </template>
 
@@ -39,45 +38,80 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    showFooter() {
+      return this.$route.meta.showFooter;
+    }
   }
 };
 </script>
 
 <style lang="stylus" scoped>
 .MainNav_wrap {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  height: 50px;
   width: 100%;
-  background: $main_page_bg;
+  background-color: #fff;
   color: #fff;
+  box-shadow: 0 1px 2px #ddd;
 
-  .fa {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 3px;
-  }
-
-  ul {
-    list-style: none;
+  .footer-nav {
+    position: relative;
     width: 100%;
     height: 50px;
 
-    li {
-      margin: 2% 0;
+    a {
+      position: relative;
       display: inline-block;
       width: 25%;
       text-align: center;
+      height: 100%;
+      line-height: 50px;
+      color: rgba(226, 199, 158, 0.7);
 
-      a {
-        width: 100%;
-        color: $main_black;
-        font-size: 14px;
+      .icon_item {
+        display: block;
+        padding: 2px;
+        font-size: 24px;
       }
 
-      a.actived {
-        color: $main_orange;
+      .nav_title {
+        display: block;
+        padding: 2px;
+        font-size: 12px;
+        line-height: 12px;
       }
+    }
+
+    a.actived {
+      color: $main_orange;
+    }
+
+    .move {
+      position: absolute;
+      display: inline-block;
+      width: 25%;
+      height: 3px;
+      background-color: $main_orange;
+      bottom: 0;
+      transition: left 0.2s ease-in-out;
+    }
+
+    a:nth-child(1).actived~.move {
+      left: 0;
+    }
+
+    a:nth-child(2).actived~.move {
+      left: 25%;
+    }
+
+    a:nth-child(3).actived~.move {
+      left: 50%;
+    }
+
+    a:nth-child(4).actived~.move {
+      left: 75%;
     }
   }
 }

@@ -1,5 +1,9 @@
 <template>
-  <div class="plugin_wrap">插件</div>
+  <div class="plugin_wrap">
+    <ul>
+      <router-link tag="li" to="betterScroll">better-scroll</router-link>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -10,11 +14,15 @@ export default {
 
 <style lang="stylus" scoped>
 .plugin_wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+
+  ul {
+    li {
+      background-color: #ddd;
+      width: 100%;
+      height: 40px;
+    }
+  }
 }
 </style>
 

@@ -1,8 +1,11 @@
 <template>
-  <header>
+  <header v-show="showHeader">
     <div class="title_content">
-      <i v-show="can_back" class="fa fa-chevron-left" @click="goBack"></i>
-      <p>{{title}}</p>
+      <span v-show="canBack" class="fa fa-angle-left header_left" @click="goBack"></span>
+      <span class="header_center">{{title}}</span>
+      <span class="header_right">
+        <slot></slot>
+      </span>
     </div>
   </header>
 </template>
@@ -10,14 +13,18 @@
 <script>
 export default {
   name: "MainHeader_wrap",
-  props: {
-    can_back: {
-      type: Boolean,
-      default: false
+  data() {
+    return {};
+  },
+  computed: {
+    showHeader() {
+      return this.$route.meta.showHeader;
     },
-    title: {
-      type: String,
-      default: ""
+    canBack() {
+      return this.$route.meta.canBack;
+    },
+    title() {
+      return this.$route.meta.title;
     }
   },
   methods: {
@@ -32,27 +39,40 @@ export default {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  height: 40px;
-  background: $main_page_bg;
-  color: #fff;
+  height: 44px;
+  background: #fff;
+  color: #000;
   z-index: 100;
+  box-shadow: 0 1px 2px #ddd;
 
   .title_content {
-    line-height: 40px;
-    color: $main_black;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    line-height: 44px;
+    color: $text_default;
     font-size: 16px;
-    margin: 0 10px;
-  }
-
-  .fa {
-    position: absolute;
-    line-height: 40px;
-    padding: 2px 8px;
-  }
-
-  p {
     text-align: center;
+
+    .header_left {
+      width: 10%;
+      height: 100%;
+      line-height: 44px;
+      font-size: 22px;
+    }
+
+    .header_center {
+      width: 80%;
+      height: 100%;
+    }
+
+    .header_right {
+      width: 10%;
+      height: 100%;
+    }
   }
 }
 </style>

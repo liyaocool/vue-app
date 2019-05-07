@@ -1,7 +1,6 @@
 <template>
   <div class="contact_wrap">
-    <main-header :can_back="true" :title="title"/>
-    <p>联系我们 123456</p>
+    <div>联系我们 123456</div>
   </div>
 </template>
 
@@ -19,13 +18,6 @@ export default {
 
 <style lang="stylus" scoped>
 .contact_wrap {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  
-  padding-top: 40px;
-  padding-bottom: 50px;
+  position: relative;
 }
 </style>

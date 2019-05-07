@@ -1,12 +1,10 @@
 <template>
-  <div class="view_wrap">
-    <transition :name="trans">
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"/>
+  <div :class="{hasHeader:hasHeader, hasFooter:hasFooter,view_wrap:true}">
+    <transition :name="trans" mode="out-in">
+      <keep-alive v-if="keepAlive">
+        <router-view/>
       </keep-alive>
-    </transition>
-    <transition :name="trans">
-      <router-view v-if="!$route.meta.keepAlive"/>
+      <router-view v-else/>
     </transition>
   </div>
 </template>
@@ -18,6 +16,17 @@ export default {
     return {
       trans: "page-right"
     };
+  },
+  computed: {
+    keepAlive() {
+      return this.$route.meta.keepAlive;
+    },
+    hasHeader() {
+      return this.$route.meta.showHeader;
+    },
+    hasFooter() {
+      return this.$route.meta.showFooter;
+    }
   },
   watch: {
     $route(to, from) {
@@ -36,15 +45,28 @@ export default {
   height: 100%;
 }
 
+.hasHeader {
+  padding-top: 44px;
+}
+
+.hasFooter {
+  padding-bottom: 50px;
+}
+
 .page-left-enter, .page-right-leave-active {
+  opacity: 0;
   transform: translate(-100%, 0);
 }
 
 .page-right-enter, .page-left-leave-active {
+  opacity: 0;
   transform: translate(100%, 0);
 }
 
 .page-left-enter-active, .page-left-leave-active, .page-right-enter-active, .page-right-leave-active {
-  transition: transform 0.3s;
+  will-change: transform;
+  transition: all 200ms;
+  position: absolute;
+  width: 100%;
 }
 </style>

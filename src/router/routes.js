@@ -17,7 +17,8 @@ const routes = [{
     path: '/home',
     name: 'home',
     meta: {
-        page: 200
+        page: 20,
+        showFooter:true,
     },
     component: () => import('@/views/Home/index')
 },
@@ -27,9 +28,21 @@ const routes = [{
     path: '/plugin',
     name: 'plugin',
     meta: {
-        page: 300
+        page: 30,
+        showFooter:true,
     },
     component: () => import('@/views/Plugin/index')
+},
+{
+    path: '/betterScroll',
+    name: 'betterScroll',
+    meta: {
+        page: 31,
+        showHeader:true,
+        title:'better-scroll',
+        canBack:true
+    },
+    component: () => import('@/views/Plugin/betterScroll')
 },
 
 //样式
@@ -37,7 +50,8 @@ const routes = [{
     path: '/style',
     name: 'style',
     meta: {
-        page: 400
+        page: 40,
+        showFooter:true,
     },
     component: () => import('@/views/Style/index')
 },
@@ -47,7 +61,8 @@ const routes = [{
     path: '/mine',
     name: 'mine',
     meta: {
-        page: 500
+        page: 50,
+        showFooter:true,
     },
     component: () => import('@/views/Mine/index'),
     children: [
@@ -58,7 +73,10 @@ const routes = [{
     path: '/mine/contact',
     name: 'contact',
     meta: {
-        page: 499
+        page: 51,
+        showHeader: true,
+        canBack: true,
+        title: '联系我们'
     },
     component: () => import('@/views/Mine/contact')
 },
