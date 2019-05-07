@@ -1,5 +1,5 @@
 <template>
-  <div class="contact_wrap">
+  <div class="contact_wrap has_header">
     <div>联系我们 123456</div>
   </div>
 </template>

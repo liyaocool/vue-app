@@ -1,5 +1,5 @@
 <template>
-  <div class="Mine_wrap">
+  <div class="Mine_wrap has_footer">
     <ul>
       <li>
         <router-link to="/mine/contact">联系我们 二级页面</router-link>

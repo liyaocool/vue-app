@@ -1,5 +1,5 @@
 <template>
-  <div class="better_scroll_wrap">betterScroll</div>
+  <div class="better_scroll_wrap has_header">betterScroll</div>
 </template>
 
 <script>

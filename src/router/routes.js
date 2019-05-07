@@ -1,6 +1,6 @@
 // @ is an alias to /src
 //初始全局加载index
-import index from '@/views/Index.vue'
+import index from '@/views/Index'
 
 const routes = [{
     path: '*',

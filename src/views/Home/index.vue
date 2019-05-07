@@ -1,5 +1,5 @@
 <template>
-  <div class="home_wrap">首页</div>
+  <div class="home_wrap has_footer">首页</div>
 </template>
 
 <script>

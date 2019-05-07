@@ -54,7 +54,7 @@ export default {
   width: 100%;
   background-color: #fff;
   color: #fff;
-  box-shadow: 0 1px 2px #ddd;
+  box-shadow: 0 -1px 1px #ddd;
 
   .footer-nav {
     position: relative;
@@ -68,7 +68,7 @@ export default {
       text-align: center;
       height: 100%;
       line-height: 50px;
-      color: rgba(226, 199, 158, 0.7);
+      color: rgba(226, 199, 158, 0.8);
 
       .icon_item {
         display: block;

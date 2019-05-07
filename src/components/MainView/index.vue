@@ -1,5 +1,5 @@
 <template>
-  <div :class="{hasHeader:hasHeader, hasFooter:hasFooter,view_wrap:true}">
+  <div class="view_wrap">
     <transition :name="trans" mode="out-in">
       <keep-alive v-if="keepAlive">
         <router-view/>
@@ -21,12 +21,6 @@ export default {
     keepAlive() {
       return this.$route.meta.keepAlive;
     },
-    hasHeader() {
-      return this.$route.meta.showHeader;
-    },
-    hasFooter() {
-      return this.$route.meta.showFooter;
-    }
   },
   watch: {
     $route(to, from) {
@@ -43,14 +37,6 @@ export default {
 <style lang="stylus" scoped>
 .view_wrap {
   height: 100%;
-}
-
-.hasHeader {
-  padding-top: 44px;
-}
-
-.hasFooter {
-  padding-bottom: 50px;
 }
 
 .page-left-enter, .page-right-leave-active {

@@ -7,13 +7,12 @@
 </template>
 
 <script>
-import MainHeader from "@/components/MainHeader";
 import MainNav from "@/components/MainNav";
-
+import MainView from "@/components/MainView"
 export default {
   name: "app",
   components: {
-    MainHeader,
+    MainView,
     MainNav
   }
 };

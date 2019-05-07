@@ -1,5 +1,5 @@
 <template>
-  <div class="style_wrap">样式</div>
+  <div class="style_wrap has_footer">样式</div>
 </template>
 
 <script>
