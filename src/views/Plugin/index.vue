@@ -26,6 +26,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -35,11 +36,6 @@ export default {
           content: "更灵活,更多功能的滑动插件.",
           path: "betterScroll"
         },
-        {
-          title: "better-scroll",
-          content: "更灵活,更多功能的滑动插件.",
-          path: "betterScroll"
-        }
       ]
     };
   }
