@@ -104,6 +104,14 @@ export default {
   background-color: #eee;
   overflow: hidden;
 
+  .icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+
   .content {
     display: flex;
     align-items: center;
