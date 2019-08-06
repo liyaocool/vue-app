@@ -35,6 +35,10 @@ export default {
           title: "better-scroll",
           content: "更灵活,更多功能的滑动插件.",
           path: "betterScroll"
+        }, {
+          title: "eChart",
+          content: "高度自由功能丰富都图表插件.",
+          path: "eChart"
         },
       ]
     };

@@ -44,6 +44,16 @@ const routes = [
       canBack: true
     },
     component: () => import("@/views/Plugin/betterScroll")
+  },{
+    path: "/eChart",
+    name: "eChart",
+    meta: {
+      page: 31,
+      showHeader: true,
+      title: "eChart",
+      canBack: true
+    },
+    component: () => import("@/views/Plugin/eChart")
   },
 
   //样式
