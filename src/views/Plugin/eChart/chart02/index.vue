@@ -6,7 +6,7 @@
     //按需引入echarts
     //可以按需引入的模块列表见 https://github.com/ecomfe/echarts/blob/master/index.js
     import echarts from "echarts/lib/echarts" //引入主模块
-    import "echarts/lib/chart/bar" //引入柱状图
+    import "echarts/lib/chart/pie" //引入柱状图
     import "echarts/lib/component/tooltip" //引入提示框
     import "echarts/lib/component/title" //引入标题
 
@@ -38,16 +38,14 @@
             initEChart() {
                 this.option = {
                     title: {
-                        text: 'ECharts 柱状图示例'
+                        text: 'ECharts 饼状图示例'
                     },
+                    radius: "40%",
+                    name: "访问来源",
                     tooltip: {},
-                    xAxis: {
-                        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-                    },
-                    yAxis: {},
                     series: [{
                         name: '销量',
-                        type: 'bar',
+                        type: 'pie',
                         data: this.myData
                     }]
                 };
@@ -60,12 +58,11 @@
             change() {
                 this.timer1 = setInterval(() => {
                     this.myData = [
-                        10 * (Math.random() * 10).toFixed(0),
-                        10 * (Math.random() * 10).toFixed(0),
-                        10 * (Math.random() * 10).toFixed(0),
-                        10* (Math.random() * 10).toFixed(0),
-                        10 * (Math.random() * 10).toFixed(0),
-                        10 * (Math.random() * 10).toFixed(0)
+                        {value: 10 * (Math.random() * 10).toFixed(0), name: '视频广告'},
+                        {value: 10 * (Math.random() * 10).toFixed(0), name: '联盟广告'},
+                        {value: 10 * (Math.random() * 10).toFixed(0), name: '邮件营销'},
+                        {value: 10 * (Math.random() * 10).toFixed(0), name: '直接访问'},
+                        {value: 10 * (Math.random() * 10).toFixed(0), name: '搜索引擎'}
                     ]
                     // console.log(this.myData)
                 }, 2000);
